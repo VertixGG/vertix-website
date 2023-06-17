@@ -1,0 +1,137 @@
+
+.header {
+	.container-fluid {
+		max-width: 80%;
+
+		@include media-breakpoint-between(xs, sm) {
+			max-width: 100%;
+		}
+	}
+
+	.navbar {
+		z-index: 1;
+
+		height: 125px;
+		background: #00000069 !important;
+		box-shadow: 20px 15px 160px 60px #00000078;
+
+		.navbar-brand {
+			h4 {
+				font-family: $font-brand;
+
+
+				display: inline;
+				color: $color-text-bluelight1;
+
+				span {
+					font-size: 30px;
+
+					color: $color-text-bluelight2;
+				}
+			}
+
+			@include media-breakpoint-between(xxl,max) {
+				margin-right: 10rem;
+			}
+		}
+
+		@include media-breakpoint-down(xl) {
+			.navbar-collapse.show {
+				background: rgba(0, 0, 0, 0.31);
+				border-radius: 60px;
+				padding: 20px 20px 30px;
+			}
+		}
+
+		.nav-item.dropdown .nav-link:after {
+			content: "▼";
+			font-size: 10px;
+			padding-left: 3px;
+			color: $color-text-bluelight;
+			position: relative;
+		}
+
+		.dropdown-menu {
+			background: #00000073;
+
+			.dropdown-item {
+				color: $color-text-light1;
+
+				&.active, &:active {
+					background-color: #0000004f;
+					color: $color-text-bluelight
+				}
+			}
+
+			:hover {
+				text-decoration: underline;
+				background: #0000004f;
+				color: $color-text-bluelight1;
+			}
+		}
+	}
+
+	.vertix-logo {
+		width: 60px;
+		transform: rotate(1140deg);
+
+		&:hover {
+			animation-name: rotate;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+		}
+	}
+
+	h1 {
+		position: relative;
+		top: 160px;
+		bottom: 40px;
+
+		font-family: $font-brand;
+		font-size: 4.5rem;
+		font-weight: 600;
+
+		color: $color-text-bluelight;
+
+		text-shadow: 0px -9px 5px #000000;
+	}
+
+	.wings {
+		position: relative;
+		top: 110px;
+
+		background-image: url(../../../public/wings.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: top center;
+
+		height: 200px;
+		width: 30%;
+
+		min-width: 420px;
+		max-width: 560px;
+
+		.vertix {
+			top: 30px;
+			max-width: 60px;
+
+			cursor: pointer;
+			position: relative;
+
+			animation-name: rotate;
+			animation-play-state: paused;
+		}
+	}
+
+}
+
+.loaded {
+	.header {
+		animation: drop-in 1s ease 200ms backwards;
+	}
+
+	.wings {
+		animation: drop-in 1ms ease 200ms backwards;
+	}
+}
