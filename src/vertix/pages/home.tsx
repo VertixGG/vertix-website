@@ -3,6 +3,11 @@ import ReactMarkdown from "react-markdown";
 import 'react-photo-view/dist/react-photo-view.css';
 
 const markdown = `#### Latest Updates
+- **21/06/2023**: Since 20/06/2023 we updated **Vertix** to **Version \`0.0.4\`**, we added **Transfer Ownership** button for dynamic channels, and **block/unblock** menus. Check out the [Changelog](/changelog). If you are already an existing **Bot User**, the **Transfer Ownership** button will be disabled by default.
+ 
+    [How to enable it?](/posts/enable-transfer-ownership)
+    
+- **19/06/2023**: The negative reviews on [top.gg](https://top.gg/bot/1111283172378955867) are made by our jealous competitor.
 
 - **16/06/2023**: Version \`0.0.3\` has been released! We are excited to introduce a new interface for **Verified Roles**. Check out the [Changelog](/changelog) for more details and explore the accompanying images [here](/features-images).
 
@@ -61,7 +66,7 @@ export default function Home() {
                     <li>And many more exciting features on the horizon!</li>
                 </ul>
                 <br/>
-                <p className="fs-5">To get started with <b>Vertix</b>, use <code>/setup</code> command and follow our simple <a href="http://localhost:3000/features-images">step-by-step</a> demonstration.</p>
+                <p className="fs-5">To get started with <b>Vertix</b>, use <code>/setup</code> command and follow our simple <a href="/posts/how-to-setup">step-by-step</a> guide.</p>
                 <br/>
                 <p className="fs-5">Thank you for considering <b>Vertix</b>, and we look forward to enhancing your Discord
                     server experience</p>

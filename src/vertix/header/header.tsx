@@ -42,7 +42,7 @@ const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: st
             >
                 { title }
             </span>
-            <ul className={ `dropdown-menu ${ isDropdownOpen ? "show" : "" }` }>
+            <ul className={ `dropdown-menu dropdown-menu-dark ${ isDropdownOpen ? "show" : "" }` }>
                 {
                     items.map( ( item, number ) =>
                         <li key={ number }>
@@ -61,6 +61,14 @@ const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: st
             </ul>
         </li>
     )
+};
+
+
+export const onAddToServerClick = () => {
+    // @ts-ignore
+    window.gtag('event', 'conversion', {'send_to': 'AW-993508183/Ck5aCMmrnq4YENf23tkD'});
+
+    window.open( "https://discord.com/oauth2/authorize?client_id=1111283172378955867&permissions=286346264&scope=bot%20applications.commands")
 };
 
 export default function Header() {
@@ -106,8 +114,8 @@ export default function Header() {
                         </ul>
 
                         <div className="buttons d-flex p-sm-2">
-                            <button onClick={ () => window.open( "https://discord.com/oauth2/authorize?client_id=1111283172378955867&permissions=286346264&scope=bot%20applications.commands") } className="btn btn-responsive btn-outline-primary me-4">Add to server</button>
-                            <button onClick={ () => window.open( "https://discord.gg/dEwKeQefUU" ) } className="btn btn-responsive btn-outline-success ms-auto">Support</button>
+                            <button id="add-to-server" onClick={ () => onAddToServerClick() } className="btn btn-responsive btn-outline-primary me-4">Add to server</button>
+                            <button id="support" onClick={ () => window.open( "https://discord.gg/dEwKeQefUU" ) } className="btn btn-responsive btn-outline-success ms-auto">Support</button>
                         </div>
                     </div>
                 </div>

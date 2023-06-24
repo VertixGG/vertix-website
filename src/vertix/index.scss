@@ -9,8 +9,106 @@
 
 @import "./pages/changelog";
 
+html, body {
+	width: auto !important;
+	overflow-x: hidden !important
+}
+
 a {
 	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-component;
+	color: $color-text-light-ligther;
+}
+
+.fs-7 {
+	font-size: 1rem;
+}
+
+@include media-breakpoint-between(xs, sm) {
+	ul {
+		padding-left: 10px;
+	}
+
+	ul > ul {
+		padding-left: 20px;
+	}
+
+	li {
+		font-size: 0.9rem;
+	}
+
+	.fs-1 {
+		font-size: 2.5rem;
+	}
+
+	.fs-2 {
+		font-size: 2rem;
+	}
+
+	.fs-3 {
+		font-size: 1.75rem;
+	}
+
+	.fs-4 {
+		font-size: 1.5rem;
+	}
+
+	.fs-5 {
+		font-size: 1.25rem;
+	}
+
+	.fs-6 {
+		font-size: 1rem;
+	}
+
+	.fs-7 {
+		font-size: 0.9rem;
+	}
+}
+
+@include media-breakpoint-between(sm, md) {
+	ul {
+		padding: 5px;
+	}
+
+	ul > ul {
+		padding-left: 13px;
+	}
+
+	li {
+		font-size: 1rem;
+	}
+
+	.fs-1 {
+		font-size: 3rem;
+	}
+
+	.fs-2 {
+		font-size: 2.5rem;
+	}
+
+	.fs-3 {
+		font-size: 2rem;
+	}
+
+	.fs-4 {
+		font-size: 1.75rem;
+	}
+
+	.fs-5 {
+		font-size: 1.5rem;
+	}
+
+	.fs-6 {
+		font-size: 1.25rem;
+	}
+
+	.fs-7 {
+		font-size: 1rem;
+	}
 }
 
 code {
@@ -19,6 +117,20 @@ code {
 	background: #191b1f;
 	font-family: monospace;
 	color: $color-text-bluelight
+}
+
+.toast {
+	background: #1e1e1e;
+	color: $color-text-bluelight;
+	border: 4px solid #1d2224;
+	border-radius: 14px;
+	box-shadow: 2px 13px 14px 4px #0000002b;
+}
+
+.toast-header {
+	background: #191b1f;
+	color: $color-text-bluelight;
+	border-bottom: 2px solid #34383a;
 }
 
 @import "./header/header";
@@ -35,9 +147,13 @@ code {
 		width: 90%;
 		margin-bottom: 30px;
 
-		@include media-breakpoint-between(xs,sm) {
+		@include media-breakpoint-between(xs, sm) {
 			padding: 15px;
 			padding-top: 40px;
+		}
+
+		@include media-breakpoint-between(sm, md) {
+			padding: 35px;
 		}
 	}
 
@@ -86,8 +202,27 @@ iframe {
 	width: initial !important;
 	height: initial !important;
 
-	@include media-breakpoint-between(xs,sm) {
+	@include media-breakpoint-between(xs, sm) {
 		max-width: 90% !important;
+	}
+}
+
+img.normalize {
+	cursor: pointer;
+	margin: 15px;
+	border: 2px solid #21272e;
+	border-radius: 14px;
+	box-shadow: 2px 13px 14px 4px #0000002b;
+	padding: 2px;
+	width: 100%;
+	max-width: min-content;
+
+
+	@include media-breakpoint-between(xs, sm) {
+		margin: 0;
+		margin-top: 15px;
+
+		max-width: 100%
 	}
 }
 
@@ -99,4 +234,15 @@ iframe {
 	box-shadow: 2px 13px 14px 4px #0000002b;
 	width: 100px;
 	padding: 2px;
+}
+
+
+.unload {
+	.dropdown-menu, .navbar, {
+		animation: opacity-out 500ms ease 200ms backwards;
+	}
+
+	.wings {
+		animation: drop-out 400ms ease 180ms backwards;
+	}
 }

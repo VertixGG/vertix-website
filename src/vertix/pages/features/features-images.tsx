@@ -56,11 +56,29 @@ const images_v_0_0_3 = [
     "https://i.ibb.co/bsnRXB9/027.png"
 ];
 
+const images_v_0_0_4 = [
+    "https://i.ibb.co/bm5L2Ty/1.png",
+    "https://i.ibb.co/D4fj9yd/2.png",
+    "https://i.ibb.co/wLwjGsW/3.png",
+    "https://i.ibb.co/Trcqvmr/4.png",
+    "https://i.ibb.co/L0B7F1f/5.png",
+    "https://i.ibb.co/wwTdny4/6.png"
+];
+
 export default function FeaturesImages() {
     return (
         <div className="container box-1 image-gallery">
             <h2>Features Images</h2>
-            <br />
+            <br/>
+
+            <h5>Updated at: 20/06/2023, v0.0.4</h5>
+            <div className={ "d-flex justify-content-center row p-3" }>
+                <PhotoProvider>
+                    { images_v_0_0_4.map( ( image, index ) => (
+                        <PhotoView src={ image }><img src={ image } alt=""/></PhotoView>
+                    ) ) }
+                </PhotoProvider>
+            </div>
 
             <h5>Updated at: 16/06/2023, v0.0.3</h5>
             <h6><b>Setup</b> demonstration</h6>
