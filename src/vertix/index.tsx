@@ -12,19 +12,27 @@ import Changelog from "@vertix/pages/changelog";
 import FeaturesVideo from "@vertix/pages/features/features-video";
 import FeaturesImages from "@vertix/pages/features/features-images";
 
+import EnableTransferOwnership from "@vertix/posts/enable-transfer-ownership";
+
 import "./index.scss";
+import HowToSetup from "@vertix/posts/how-to-setup";
 
 export default function Index() {
-    const [ isLoaded, setLoaded ] = React.useState( document.readyState === "complete" );
+    const [ isLoaded, setLoaded ] = React.useState( document.readyState === "complete" ),
+        [ isUnloading, setUnload ] = React.useState( false );
 
     if ( ! isLoaded ) {
         window.addEventListener( "load", () => {
             setLoaded( true );
         } );
+
+        window.addEventListener( "beforeunload", () => {
+            setUnload( true );
+        } );
     }
 
     return (
-        <div className={`body-container ${ document.readyState === "complete" || isLoaded ? "loaded" : "" }`}>
+        <div className={`body-container ${ document.readyState === "complete" || isLoaded ? "loaded" : "" } ${ isUnloading ? "unload" : ""}`}>
             <Header/>
 
             <section className="content">
@@ -36,6 +44,14 @@ export default function Index() {
                     <Route path="/features-video" element={ <FeaturesVideo/> }/>
                     <Route path="/features-images" element={ <FeaturesImages/> }/>
                     <Route path="/changelog" element={ <Changelog/> }/>
+
+                    <Route path="/posts/enable-transfer-ownership" element={ <EnableTransferOwnership /> }></Route>
+                    <Route path="/posts/how-to-setup" element={ <HowToSetup /> }></Route>
+
+                    <Route path="*" element={ <Home/> }/>
+
+
+
                 </Routes>
                 {/*</Suspense>*/ }
             </section>

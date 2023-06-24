@@ -3,14 +3,25 @@ import ReactMarkdown from 'react-markdown'
 const markdown = `
 ## Changelog
 
+**Version: 0.0.4 ~ 20/06/2023**
+
+- Normalized the 👥 Access menu:
+  - Added 🫵  Block user access menu.
+  - Added 🤙 Un-Block user access menu.
+
+- Added a new button for the dynamic channel interface:
+  - 🔀 Transfer ownership - This button allows you to transfer the channel ownership to another user.
+  
+---
+
 **Version: 0.0.3 ~ 16/06/2023**
 
 - New Interface for ⚙️ Configure:
-    - (∙🟢 On/∙🔴 Off) **Toggle** - Enabling owner mention when creating dynamic channel.
+    - (∙🟢 On/∙🔴 Off) **Toggle** - Enabling/Disabling owner mention when creating dynamic channel.
 
 - New Interface for 🛡️ Verified roles:
     - (∙🟢 On/∙🔴 Off) **Toggle** - Applies to \`@everyone\` role.
-    - Ability option to select or edit multiple roles.
+    - Option to select or edit **multiple roles**.
   
    __Explanation__: Changing the state of dynamic channel will affect the verified roles.
    - 🌐 / 🚫 (\`Public/Private\`) - Toggle between the states.
