@@ -13,9 +13,10 @@ import FeaturesVideo from "@vertix/pages/features/features-video";
 import FeaturesImages from "@vertix/pages/features/features-images";
 
 import EnableTransferOwnership from "@vertix/posts/enable-transfer-ownership";
+import HowToSetup from "@vertix/posts/how-to-setup";
+import HowToSetupLogsChannel from "@vertix/posts/how-to-setup-logs-channel";
 
 import "./index.scss";
-import HowToSetup from "@vertix/posts/how-to-setup";
 
 export default function Index() {
     const [ isLoaded, setLoaded ] = React.useState( document.readyState === "complete" ),
@@ -47,6 +48,7 @@ export default function Index() {
 
                     <Route path="/posts/enable-transfer-ownership" element={ <EnableTransferOwnership /> }></Route>
                     <Route path="/posts/how-to-setup" element={ <HowToSetup /> }></Route>
+                    <Route path="/posts/how-to-setup-logs-channel" element={ <HowToSetupLogsChannel /> }></Route>
 
                     <Route path="*" element={ <Home/> }/>
 

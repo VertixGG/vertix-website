@@ -3,6 +3,10 @@ import ReactMarkdown from "react-markdown";
 import 'react-photo-view/dist/react-photo-view.css';
 
 const markdown = `#### Latest Updates
+- **24/06/2023**: \`0.0.5\` has been released! We are excited to introduce **Dynamic Channel Logs**, Check out the full [Changelog](/changelog) for more details.
+
+    [How to enable dynamic channel logs?](/posts/how-to-setup-logs-channel)
+    
 - **21/06/2023**: Since 20/06/2023 we updated **Vertix** to **Version \`0.0.4\`**, we added **Transfer Ownership** button for dynamic channels, and **block/unblock** menus. Check out the [Changelog](/changelog). If you are already an existing **Bot User**, the **Transfer Ownership** button will be disabled by default.
  
     [How to enable it?](/posts/enable-transfer-ownership)
