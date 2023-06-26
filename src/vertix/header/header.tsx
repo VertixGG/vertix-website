@@ -16,7 +16,11 @@ const NavbarItem: React.FC<{ title: string, href: string }> = ( { title, href } 
     )
 };
 
-const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: string }[] }> = ( { title, items } ) => {
+const NavbarDropdown: React.FC<{
+    title: string,
+    items: { title?: string, href?: string, divider?: boolean }[]
+}> = (
+    { title, items } ) => {
     let dropdownTimeout: NodeJS.Timeout;
 
     const [ isDropdownOpen, setDropdownState ] = React.useState( false ),
@@ -30,15 +34,15 @@ const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: st
 
     return (
         <li className="nav-item dropdown">
-            <span className="nav-link"  role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false"
-               onMouseEnter={ () => {
-                   clearTimeout( dropdownTimeout );
-                   setDropdownState( true )
-               } }
-               onMouseLeave={ () => dropdownTimeout = setTimeout( () => setDropdownState( false ), 200 ) }
-               onClick={ toggleDropdown }
+            <span className="nav-link" role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  onMouseEnter={ () => {
+                      clearTimeout( dropdownTimeout );
+                      setDropdownState( true )
+                  } }
+                  onMouseLeave={ () => dropdownTimeout = setTimeout( () => setDropdownState( false ), 200 ) }
+                  onClick={ toggleDropdown }
             >
                 { title }
             </span>
@@ -46,9 +50,8 @@ const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: st
                 {
                     items.map( ( item, number ) =>
                         <li key={ number }>
-
                             <a
-                                className={`dropdown-item ${ location.pathname === item.href ? "active" : "" } `}
+                                className={ `dropdown-item ${ location.pathname === item.href ? "active" : "" } ` }
                                 href={ item.href }
                                 onMouseEnter={ () => openAndClearTimeout() }
                                 onMouseLeave={ () => setDropdownState( false ) }
@@ -66,9 +69,9 @@ const NavbarDropdown: React.FC<{ title: string, items: { title: string, href: st
 
 export const onAddToServerClick = () => {
     // @ts-ignore
-    window.gtag('event', 'conversion', {'send_to': 'AW-993508183/Ck5aCMmrnq4YENf23tkD'});
+    window.gtag( 'event', 'conversion', { 'send_to': 'AW-993508183/Ck5aCMmrnq4YENf23tkD' } );
 
-    window.open( "https://discord.com/oauth2/authorize?client_id=1111283172378955867&permissions=286346264&scope=bot%20applications.commands")
+    window.open( "https://discord.com/oauth2/authorize?client_id=1111283172378955867&permissions=286346264&scope=bot%20applications.commands" )
 };
 
 export default function Header() {
@@ -89,40 +92,47 @@ export default function Header() {
                             aria-expanded="false" aria-label="Toggle navigation"
                             onClick={ toggleNavbar }
                     >
-
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className={ `navbar-collapse collapse ${ isNavbarOpen ? "show" : "" }` }
-                         id="navbarSupportedContent">
+                    <div className={ `navbar-collapse collapse ${ isNavbarOpen ? "show" : "" }` }>
                         <ul className="navbar-nav me-auto ms-3 mb-2 mb-lg-0 md-xs-5">
                             <NavbarItem title="Home" href="/"/>
 
                             <NavbarDropdown title="Features" items={ [
-                                { title: "Video", href: "/features-video" },
+                                { title: "Voice Channels", href: "/features/dynamic-channels-showcase" },
+
+                                { divider: true },
                                 { title: "Images Gallery", href: "/features-images" },
+                                { title: "Video", href: "/features-video" },
                             ] }/>
 
 
-                            <NavbarDropdown title="Legal Policies" items={ [
-                                { title: "Privacy Policy", href: "/privacy-policy" },
-                                { title: "Terms of Service", href: "/terms-of-service" },
+                            <NavbarDropdown title="How to" items={ [
+                                { title: "Setup", href: "/posts/how-to-setup" },
+                                { divider: true },
+                                { title: "Enable Logs", href: "/posts/how-to-setup-logs-channel" },
+                                { title: "Enable Features", href: "/posts/enable-transfer-ownership" },
                             ] }/>
 
-                            <NavbarItem title="Changelog" href="/changelog"/>
-                            {/*<NavbarItem title="Contact" href="mailto:leonid@vertix.gg"/>*/}
+                            <NavbarItem title="Updates" href="/updates"/>
+                            {/*<NavbarItem title="Contact" href="mailto:leonid@vertix.gg"/>*/ }
                         </ul>
 
                         <div className="buttons d-flex p-sm-2">
-                            <button id="add-to-server" onClick={ () => onAddToServerClick() } className="btn btn-responsive btn-outline-primary me-4">Add to server</button>
-                            <button id="support" onClick={ () => window.open( "https://discord.gg/dEwKeQefUU" ) } className="btn btn-responsive btn-outline-success ms-auto">Support</button>
+                            <button id="add-to-server" onClick={ () => onAddToServerClick() }
+                                    className="btn btn-responsive btn-outline-primary me-4">Add to server
+                            </button>
+                            <button id="support" onClick={ () => window.open( "https://discord.gg/dEwKeQefUU" ) }
+                                    className="btn btn-responsive btn-outline-success ms-auto">Support
+                            </button>
                         </div>
                     </div>
                 </div>
             </nav>
 
             <div className="d-flex justify-content-center">
-                <div className={`wings text-center`}>
+                <div className={ `wings text-center` }>
                     <h1 className="user-select-none">Vertix</h1>
                     <img src={ VertixGIF } alt="" className="vertix user-select-none"></img>
                 </div>

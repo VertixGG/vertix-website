@@ -218,7 +218,7 @@ export default function HowToSetup() {
                     <br/>
                     <div aria-live="polite" aria-atomic="true"
                          className="d-flex justify-content-center align-items-center">
-                        <div className="toast show w-100" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div className="toast show w-100" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
                             <div className="toast-header">
                                 <img src="https://simgbb.com/avatar/PGKBv5T3fZLJ.png" width="30"
                                      className="rounded-4 me-2"

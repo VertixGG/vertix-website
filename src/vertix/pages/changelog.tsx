@@ -3,6 +3,29 @@ import ReactMarkdown from 'react-markdown'
 const markdown = `
 ## Changelog
 
+**Version: 0.0.5 ~ 24/06/2023**
+
+- New Feature:
+  - Send logs to custom channel - Now you can set a custom channel for receiving logs via the \`Edit Master Channel\` option in the \`/setup\` command.
+
+- Access Menus 👥:
+  - Added 👢 Kick user menu.
+  - Fixed an issue with the display of the **_Allowed Users_** showing the channel owner .
+
+- BadWords 🙅:
+  - Added support for limiting words per sentence.
+
+- Claim 😈:
+  - Fixed an issue where the wrong previous owner was displayed.
+
+- Optimization & Performance 📊:
+  - Implemented a limitation: If a user requests to create a channel more than **twice** within **40** seconds, they will be temporarily restricted for **40** seconds.
+
+- Fixed issue with **Not your channel** embed:
+  - The issue related to pointing to the wrong **"➕ New Channel"** has been resolved.
+
+---
+
 **Version: 0.0.4 ~ 20/06/2023**
 
 - Normalized the 👥 Access menu:
