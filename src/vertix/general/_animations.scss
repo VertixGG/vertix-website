@@ -23,6 +23,10 @@
 	animation: drop-in 2500ms ease 500ms backwards;
 }
 
+.opacity-in-1 {
+	animation: opacity-in 0.5s ease 200ms backwards;
+}
+
 .opacity-out-1 {
 	animation: opacity-out 1s ease 200ms backwards;
 }
@@ -62,6 +66,15 @@
 	}
 	to {
 		opacity: 0;
+	}
+}
+
+@keyframes opacity-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 

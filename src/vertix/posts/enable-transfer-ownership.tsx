@@ -1,10 +1,8 @@
 export default function EnableTransferOwnership() {
     return (
         <div className="container box-1">
-            <h5>Enabling Dynamic Channel - (<code>🔀 Transfer Ownership</code>) Button</h5>
+            <h5>Enabling Dynamic Channel - Buttons</h5>
             <br />
-            <p className="fs-5">Since <b>Version</b> <code>0.0.4</code> we added <b>Transfer Ownership</b> button for dynamic channel interface.</p>
-            <p className="fs-5">If you are already exist <u>Bot User</u> the button will be disabled by default, here are the steps you can take to enable it:</p>
 
             <ol className="fs-5">
                 <li>
@@ -32,7 +30,7 @@ export default function EnableTransferOwnership() {
                 </li>
                 <br />
                 <li>
-                    Select the <b>🔀 Transfer Ownership</b> option, then press <b>done</b> button.
+                    Select the <b>🔀 Transfer Ownership</b> for example option, then press <b>done</b> button.
                     <br />
                     <img className="normalize" src="https://i.ibb.co/fn9Bsq2/e5.png" alt="e5" />
                 </li>
@@ -53,7 +51,7 @@ export default function EnableTransferOwnership() {
             </ol>
 
             <br />
-            <p>Updated at: 21/06/2023</p>
+            <p>Updated at: 25/06/2023</p>
         </div>
     )
 }
