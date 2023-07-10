@@ -352,11 +352,11 @@ img.normalize {
 
 .unload {
 	.dropdown-menu, .navbar, {
-		animation: opacity-out 500ms ease 200ms backwards;
+		animation: opacity-out 500ms ease 200ms forwards;
 	}
 
 	.wings {
-		animation: drop-out 400ms ease 180ms backwards;
+		animation: drop-out 400ms ease 180ms forwards;
 	}
 }
 

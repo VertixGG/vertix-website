@@ -147,6 +147,20 @@
 
 }
 
+.not-loaded {
+	.header {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.wings {
+		.vertix {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+
 .loaded {
 	.header {
 		animation: drop-in 1s ease 200ms backwards;
