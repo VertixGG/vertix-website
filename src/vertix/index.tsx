@@ -23,6 +23,7 @@ const FeaturesDynamicChannelsShowcase = React.lazy( () => import( "@vertix/pages
 const EnableTransferOwnership = React.lazy( () => import( "@vertix/posts/enable-transfer-ownership" ) );
 const HowToSetup = React.lazy( () => import( "@vertix/posts/how-to-setup" ) );
 const HowToSetupLogsChannel = React.lazy( () => import( "@vertix/posts/how-to-setup-logs-channel" ) );
+const HowToSetupDisplayStepStandalone = React.lazy( () => import( "@vertix/posts/steps/how-to-setup-display-step-standalone" ) );
 
 function wrapPromiseSuspendable( promise: Promise<any> ) {
     let status = "pending";
@@ -88,6 +89,7 @@ const RoutesComponent = () => {
             <Route path="/posts/how-to-setup" element={ <HowToSetup/> }></Route>
             <Route path="/posts/how-to-setup-logs-channel" element={ <HowToSetupLogsChannel/> }></Route>
 
+            <Route path="/setup/:step" element={ <HowToSetupDisplayStepStandalone/> }></Route>
 
             <Route path="*" element={ <Home/> }/>
         </Routes>
