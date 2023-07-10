@@ -11,7 +11,7 @@
 	}
 }
 
-.btn::after {
+.btn-effect::after {
 	background: #fff;
 	content: "";
 	height: 155px;
@@ -24,7 +24,7 @@
 	width: 50px;
 }
 
-.btn:hover::after {
+.btn-effect:hover::after {
 	left: 120%;
 	transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
 }

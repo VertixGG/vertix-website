@@ -8,6 +8,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 import "./index.scss";
 
+const InviteVertix = React.lazy( () => import( "@vertix/pages/invite-vertix" ) );
 
 const PrivacyPolicy = React.lazy( () => import( "@vertix/pages/legal-polices/privacy-policy" ) );
 const TermsOfService = React.lazy( () => import( "@vertix/pages/legal-polices/terms-of-service" ) );
@@ -71,6 +72,7 @@ const RoutesComponent = () => {
         <Routes>
             <Route path="/" element={ <Home/> }/>
 
+            <Route path="/invite-vertix" element={ <InviteVertix/> }/>
 
             <Route path="/privacy-policy" element={ <PrivacyPolicy/> }/>
             <Route path="/terms-of-service" element={ <TermsOfService/> }/>
