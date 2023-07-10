@@ -10,6 +10,8 @@
 
 @import "./pages/changelog";
 
+/* TODO: Use variables for bootstrap dark theme, anyway use variables where it possible */
+
 html, body {
 	width: auto !important;
 	overflow-x: hidden !important
@@ -44,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: $color-text-light-ligther;
 }
 
-/* TODO: Use variables */
 
 .fs-7 {
 	font-size: 1rem;
@@ -147,10 +148,8 @@ code {
 	color: $color-text-bluelight
 }
 
-/* Normalize with dark theme + Use variables */
 .toast {
 	background: #1e1e1e;
-	color: $color-text-bluelight;
 	border: 4px solid #1d2224;
 	border-radius: 14px;
 	box-shadow: 2px 13px 14px 4px #0000002b;
@@ -161,6 +160,7 @@ code {
 	color: $color-text-bluelight;
 	border-bottom: 2px solid #34383a;
 }
+
 
 @import "./header/header";
 
@@ -303,7 +303,6 @@ img.normalize {
 
 .showcase .icon {
 	margin-right: 10px;
-	font-size: 35px;
 	position: relative;
 	top: 5px;
 }

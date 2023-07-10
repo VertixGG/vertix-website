@@ -46,7 +46,7 @@ const NavbarDropdown: React.FC<{
             >
                 { title }
             </span>
-            <ul className={ `dropdown-menu dropdown-menu-dark ${ isDropdownOpen ? "show" : "" }` }>
+            <ul className={ `dropdown-menu border-0 ${ isDropdownOpen ? "show" : "" }` }>
                 {
                     items.map( ( item, number ) =>
                         <li key={ number }>
@@ -80,7 +80,7 @@ export default function Header() {
 
     return (
         <section id="header" className="header">
-            <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-xl">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
                         <img src={ VertixPNG } alt="" className="vertix-logo me-1 user-select-none"></img>
