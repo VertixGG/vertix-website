@@ -1,8 +1,12 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import { Route, Routes } from 'react-router-dom';
+
+import LoadingContainer from "@vertix/ui/loading-container";
 
 import Header from "@vertix/header/header";
 import Home from "@vertix/pages/home";
+
+import { allImagesLoadedPromise, windowLoadedPromise, wrapPromiseSuspendable } from "@internal/utils/loading";
 
 import 'react-photo-view/dist/react-photo-view.css';
 
@@ -25,45 +29,7 @@ const HowToSetup = React.lazy( () => import( "@vertix/posts/how-to-setup" ) );
 const HowToSetupLogsChannel = React.lazy( () => import( "@vertix/posts/how-to-setup-logs-channel" ) );
 const HowToSetupDisplayStepStandalone = React.lazy( () => import( "@vertix/posts/steps/how-to-setup-display-step-standalone" ) );
 
-function wrapPromiseSuspendable( promise: Promise<any> ) {
-    let status = "pending";
-    let result: any;
-    let suspender = promise.then(
-        ( r ) => {
-            status = "success";
-            result = r;
-        },
-        ( e ) => {
-            status = "error";
-            result = e;
-        }
-    );
-    return {
-        read() {
-            if ( status === "pending" ) {
-                throw suspender;
-            } else if ( status === "error" ) {
-                throw result;
-            } else if ( status === "success" ) {
-                return result;
-            }
-        }
-    };
-}
-
-const createLoadedPromise = ( isAlreadyLoaded = document.readyState === "complete"  ) => {
-    return new Promise( ( resolve ) => {
-        if ( isAlreadyLoaded ) {
-            return resolve( true );
-        }
-
-        window.addEventListener( "load", () => {
-            resolve( true );
-        } );
-    } ) as Promise<boolean>;
-};
-
-const loadedPromise = createLoadedPromise(),
+const loadedPromise = windowLoadedPromise(),
     loadedSuspensePromise = wrapPromiseSuspendable( loadedPromise );
 
 const RoutesComponent = () => {
@@ -96,39 +62,30 @@ const RoutesComponent = () => {
     )
 };
 
-window.addEventListener( "beforeunload", ( e ) => {
-    document.querySelector(".body-container")?.classList.add("unload");
-    document.querySelector(".body-container")?.classList.remove("loaded");
-} );
-
 export default function Index() {
-    const [ isLoaded, setLoaded ] = React.useState( false );
+    console.log( "Index" );
 
     loadedPromise.then( () => {
-        setTimeout( () => {
-            setLoaded( true );
+        console.log( "Loaded" );
+
+        allImagesLoadedPromise().then( () => {
+            console.log( "All images loaded" );
+
+            document.querySelector( ".body-container" )?.classList.remove( "unload", "not-loaded" );
+            document.querySelector( ".body-container" )?.classList.add( "loaded" );
         } );
     } );
 
     return (
-        <div
-            className={ `body-container ${ document.readyState === "complete" || isLoaded ? "loaded" : "not-loaded" }` }>
+        <div className="body-container not-loaded">
             <Header/>
 
             <section className="content">
-                <Suspense fallback={ <div className="container box-1">
-                    <div className="row">
-                        <div className="col-12 text-center">
-                            <div className="spinner spinner-border text-primary" style={{width: "100px", height: "100px"}} role="status">
-                            </div>
-                        </div>
-                    </div>
-                </div> }>
-
-                <RoutesComponent />
-
+                <Suspense fallback={ LoadingContainer() }>
+                    <RoutesComponent/>
                 </Suspense>
             </section>
+
             <div className="container">
                 <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
                     <p className="col-md-4 mb-0 text-muted">© 2023 Vertix.gg</p>

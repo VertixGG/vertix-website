@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+
 import { PhotoProvider, PhotoView } from "react-photo-view";
+
+import { allImagesLoadedPromise } from "@internal/utils/loading";
+
+import LoadingContainer from "@vertix/ui/loading-container";
 
 const images_v_0_0_0 = {
     '101.png': 'https://drive.google.com/uc?export=download&id=1Jiq9WkmKl7AsEQhT0zY2d0zn4TfJqLkB',
@@ -65,9 +71,9 @@ const images_v_0_0_4 = {
     '6.png': 'https://drive.google.com/uc?export=download&id=1IE7VHEJps73u-cBu-NdsxtWdLjgE7DYr',
 };
 
-export default function FeaturesImages() {
+export function ImagesGallery( props: { show: boolean } ) {
     return (
-        <div className="container box-1 image-gallery">
+        <div className={ `container box-1 image-gallery ${ props.show ? "visible" : "invisible" }` }>
             <h2>Features Images</h2>
             <br/>
 
@@ -100,5 +106,25 @@ export default function FeaturesImages() {
                 </PhotoProvider>
             </div>
         </div>
-    );
+    )
+}
+
+export default function FeaturesImages() {
+    const [ isImagesLoaded, setIsImagesLoaded ] = useState( false );
+
+    setTimeout( () => {
+        allImagesLoadedPromise().then( () => {
+            setIsImagesLoaded( true );
+        } );
+    } );
+
+    return (
+        <>
+            {
+               ! isImagesLoaded && <LoadingContainer/>
+            }
+            <ImagesGallery show={isImagesLoaded }/>
+        </>
+    )
+
 }
