@@ -506,8 +506,7 @@ export default function FeaturesDynamicChannelsShowcase() {
                     </div>
 
                     <div className="text">
-                        <p>If the owner returns or clicks the <code>claim</code>Apologies for the incomplete response once again. Here's the complete code snippet:
-                            button, ownership will return to them!</p>
+                        <p>If the owner returns or clicks the <code>claim</code> button, ownership will return to them!</p>
                     </div>
 
                     <div className="image-placeholder">
