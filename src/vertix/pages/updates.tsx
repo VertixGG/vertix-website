@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import 'react-photo-view/dist/react-photo-view.css';
 
 const markdown = `#### Latest Updates
+- **11/07/2023**: \`0.0.6\` is now available! with new **Dynamic Channel AutoSave** Feature, Read the [Changelog](/changelog) for further details.
+
 - **24/06/2023**: \`0.0.5\` has been released! We are excited to introduce **Dynamic Channel Logs**, Check out the full [Changelog](/changelog) for more details.
 
     [How to enable dynamic channel logs?](/posts/how-to-setup-logs-channel)

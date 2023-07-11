@@ -27,7 +27,7 @@ export default function Home() {
                     Your input is invaluable to us, and we appreciate your contribution to making <b>Vertix</b> even better.
                 </p>
                 <br/>
-                <p className="fs-5">Although <b>Vertix</b> is currently in its initial version <code>v0.0.5</code>, we have an extensive backlog of
+                <p className="fs-5">We have an extensive backlog of
                     exciting features in
                     the pipeline, including:</p>
                 <ul>

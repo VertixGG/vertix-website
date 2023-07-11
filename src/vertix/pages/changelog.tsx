@@ -3,6 +3,13 @@ import ReactMarkdown from 'react-markdown'
 const markdown = `
 ## Changelog
 
+**Version: 0.0.6 ~ 11/07/2023**
+
+- New Feature:
+  - Enable autosave - Configuration per **Master Channel** - Automatically saves the state of dynamic channels. When a channel is re-created, it will have the same configuration as before its deletion.
+
+---
+
 **Version: 0.0.5 ~ 24/06/2023**
 
 - New Feature:
