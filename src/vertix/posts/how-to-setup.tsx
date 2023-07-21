@@ -2,8 +2,6 @@ import HowToSetupStep1 from "@vertix/posts/steps/how-to-setup-step-1";
 import HowToSetupStep2 from "@vertix/posts/steps/how-to-setup-step-2";
 import HowToSetupStep3 from "@vertix/posts/steps/how-to-setup-step-3";
 
-
-
 export default function HowToSetup() {
     return (
         <>

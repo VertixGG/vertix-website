@@ -3,6 +3,12 @@ import ReactMarkdown from 'react-markdown'
 const markdown = `
 ## Changelog
 
+**Version: 0.0.7 ~ 19/07/2023**
+- New Language:
+  -  🇬🇷 Greek - Thanks to \`@christos56\` for his support/translation!
+
+---
+
 **Version: 0.0.6 ~ 11/07/2023**
 
 - New Feature:

@@ -18,6 +18,7 @@ const PrivacyPolicy = React.lazy( () => import( "@vertix/pages/legal-polices/pri
 const TermsOfService = React.lazy( () => import( "@vertix/pages/legal-polices/terms-of-service" ) );
 
 const Changelog = React.lazy( () => import( "@vertix/pages/changelog" ) );
+const Credits = React.lazy( () => import( "@vertix/pages/credits" ) );
 const Updates = React.lazy( () => import( "@vertix/pages/updates" ) );
 
 const FeaturesVideo = React.lazy( () => import( "@vertix/pages/features/features-video" ) );
@@ -50,6 +51,7 @@ const RoutesComponent = () => {
 
             <Route path="/changelog" element={ <Changelog/> }/>
             <Route path="/updates" element={ <Updates/> }/>
+            <Route path="/credits" element={ <Credits/> }/>
 
             <Route path="/posts/enable-transfer-ownership" element={ <EnableTransferOwnership/> }></Route>
             <Route path="/posts/how-to-setup" element={ <HowToSetup/> }></Route>
@@ -90,12 +92,14 @@ export default function Index() {
                 <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
                     <p className="col-md-4 mb-0 text-muted">© 2023 Vertix.gg</p>
 
-                    <ul className="nav col-md-5 justify-content-end">
+                    <ul className="nav col-md justify-content-end">
                         <li className="nav-item"><a href="/privacy-policy" className="nav-link px-2 text-muted">Privacy
                             Policy</a></li>
                         <li className="nav-item"><a href="/terms-of-service" className="nav-link px-2 text-muted">Terms
                             Of Service</a></li>
                         <li className="nav-item"><a href="/changelog" className="nav-link px-2 text-muted">Changelog</a>
+                        </li>
+                        <li className="nav-item"><a href="/credits" className="nav-link px-2 text-muted">Credits</a>
                         </li>
                         <li className="nav-item"><a href="mailto:leonid@vertix.gg"
                                                     className="nav-link px-2 text-muted">Contact</a></li>
