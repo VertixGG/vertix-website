@@ -46,7 +46,7 @@ const NavbarDropdown: React.FC<{
             >
                 { title }
             </span>
-            <ul className={ `dropdown-menu dropdown-menu-dark ${ isDropdownOpen ? "show" : "" }` }>
+            <ul className={ `dropdown-menu border-0 ${ isDropdownOpen ? "show" : "" }` }>
                 {
                     items.map( ( item, number ) =>
                         <li key={ number }>
@@ -68,10 +68,7 @@ const NavbarDropdown: React.FC<{
 
 
 export const onAddToServerClick = () => {
-    // @ts-ignore
-    window.gtag( 'event', 'conversion', { 'send_to': 'AW-993508183/Ck5aCMmrnq4YENf23tkD' } );
-
-    window.open( "https://discord.com/oauth2/authorize?client_id=1111283172378955867&permissions=286346264&scope=bot%20applications.commands" )
+    window.location.href = "/invite-vertix"
 };
 
 export default function Header() {
@@ -80,7 +77,7 @@ export default function Header() {
 
     return (
         <section id="header" className="header">
-            <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-xl">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
                         <img src={ VertixPNG } alt="" className="vertix-logo me-1 user-select-none"></img>
@@ -116,15 +113,15 @@ export default function Header() {
                             ] }/>
 
                             <NavbarItem title="Updates" href="/updates"/>
-                            {/*<NavbarItem title="Contact" href="mailto:leonid@vertix.gg"/>*/ }
                         </ul>
 
                         <div className="buttons d-flex p-sm-2">
                             <button id="add-to-server" onClick={ () => onAddToServerClick() }
-                                    className="btn btn-responsive btn-outline-primary me-4">Add to server
+                                    className="btn ps-4 pe-4 btn-responsive btn-outline-primary btn-effect me-4">Invite
+                                Vertix
                             </button>
                             <button id="support" onClick={ () => window.open( "https://discord.gg/dEwKeQefUU" ) }
-                                    className="btn btn-responsive btn-outline-success ms-auto">Support
+                                    className="btn btn-responsive btn-outline-success btn-effect ms-auto">Support
                             </button>
                         </div>
                     </div>

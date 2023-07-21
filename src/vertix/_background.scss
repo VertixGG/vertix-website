@@ -3,7 +3,7 @@ body {
 	color: $color-text-light;
 
 	.body-container {
-		opacity: 0;
+		opacity: 0.2;
 		transition: opacity 1s ease-in-out; /* Add a transition for a smooth effect */
 
 		background-image: url(../../public/bg2.jpg), url(../../public/bg1.jpg);

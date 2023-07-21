@@ -58,7 +58,7 @@
 				color: $color-text-light1;
 
 				&.active, &.focus {
-					background-color: #0000004f;
+					background-color: unset;
 					color: $color-text-bluelight
 				}
 			}
@@ -145,6 +145,20 @@
 		}
 	}
 
+}
+
+.not-loaded {
+	.header {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.wings {
+		.vertix {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
 }
 
 .loaded {
