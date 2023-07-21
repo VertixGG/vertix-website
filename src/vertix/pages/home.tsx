@@ -5,7 +5,7 @@ export default function Home() {
                 <div className="row text-center pt-2 user-select-none">
                     <div className="col-lg-4">
                         <span className="text-primary-emphasis fw-bold" style={{fontSize: "100px", textShadow: "rgb(0 0 0) -8px 8px 1px"}}>
-                            ⮑
+                            ⫸
                         </span>
 
                         <h2 className="fw-normal">Auto Save</h2>
