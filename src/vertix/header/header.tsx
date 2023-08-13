@@ -3,7 +3,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import VertixPNG from "../assets/vertix-optimized.png";
-import VertixGIF from "../assets/vertix-optimized.gif";
 
 const NavbarItem: React.FC<{ title: string, href: string }> = ( { title, href } ) => {
     const location = useLocation();
@@ -65,7 +64,6 @@ const NavbarDropdown: React.FC<{
         </li>
     )
 };
-
 
 export const onAddToServerClick = () => {
     window.location.href = "/invite-vertix"
@@ -131,7 +129,7 @@ export default function Header() {
             <div className="d-flex justify-content-center">
                 <div className={ `wings text-center` }>
                     <h1 className="user-select-none">Vertix</h1>
-                    <img src={ VertixGIF } alt="" className="vertix user-select-none"></img>
+                    <img src={ VertixPNG } alt="" className="vertix user-select-none"></img>
                 </div>
             </div>
         </section>
