@@ -21,9 +21,14 @@
 		"typescript": "^4.9.5",
 		"web-vitals": "^2.1.4"
 	},
+	"devDependencies": {
+		"@craco/craco": "^7.1.0",
+		"react-app-alias": "^2.2.2"
+	},
 	"scripts": {
 		"start": "craco start",
 		"build": "craco build",
+		"serve": "craco build && serve -s build",
 		"release": "craco build && bash ./scripts/release.sh",
 		"test": "craco test"
 	},
@@ -44,10 +49,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"@craco/craco": "^7.1.0",
-		"@types/react-image-gallery": "^1.2.0",
-		"react-app-alias": "^2.2.2"
 	}
 }

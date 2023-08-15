@@ -129,7 +129,7 @@ export default function Header() {
             <div className="d-flex justify-content-center">
                 <div className={ `wings text-center` }>
                     <h1 className="user-select-none">Vertix</h1>
-                    <img src={ VertixPNG } alt="" className="vertix user-select-none"></img>
+                    <img src={ VertixPNG } alt="" className="vertix-logo user-select-none"></img>
                 </div>
             </div>
         </section>

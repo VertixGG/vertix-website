@@ -9,9 +9,12 @@ import Home from "@vertix/pages/home";
 
 import { allImagesLoadedPromise, windowLoadedPromise, wrapPromiseSuspendable } from "@internal/utils/loading";
 
-import 'react-photo-view/dist/react-photo-view.css';
+import "./style-static.scss"
 
-import "./index.scss";
+( () => {
+    // @ts-ignore
+    import ( "./style-dynamic.scss" );
+} )();
 
 const InviteVertix = React.lazy( () => import( "@vertix/pages/invite-vertix" ) );
 

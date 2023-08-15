@@ -1,3 +1,5 @@
+@import 'react-photo-view/dist/react-photo-view.css';
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 @import "./general/variables";
@@ -349,15 +351,6 @@ img.normalize {
 	}
 }
 
-.unload {
-	.dropdown-menu, .navbar, {
-		animation: opacity-out 500ms ease 200ms forwards;
-	}
-
-	.wings {
-		animation: drop-out 400ms ease 180ms forwards;
-	}
-}
 
 footer {
 	color: #d9d9d9;

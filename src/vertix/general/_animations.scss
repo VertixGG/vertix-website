@@ -31,13 +31,6 @@
 	animation: opacity-out 1s ease 200ms backwards;
 }
 
-.pulse {
-	@include media-breakpoint-up(xl) {
-		animation: pulse 2s infinite;
-		transition: .2s;
-	}
-}
-
 @keyframes drop-in {
 	from {
 		opacity: 0;

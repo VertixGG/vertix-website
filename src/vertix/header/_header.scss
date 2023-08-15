@@ -1,4 +1,3 @@
-
 .header {
 	.container-fluid {
 		max-width: 80%;
@@ -18,7 +17,6 @@
 		.navbar-brand {
 			h4 {
 				font-family: $font-brand;
-
 
 				display: inline;
 				color: $color-text-bluelight1;
@@ -133,7 +131,7 @@
 		min-width: 420px;
 		max-width: 560px;
 
-		.vertix {
+		.vertix-logo {
 			top: 30px;
 			max-width: 60px;
 
@@ -145,30 +143,5 @@
 			animation-iteration-count: infinite;
 			animation-play-state: running;
 		}
-	}
-
-}
-
-.not-loaded {
-	.header {
-		opacity: 0;
-		pointer-events: none;
-	}
-
-	.wings {
-		.vertix {
-			opacity: 0;
-			pointer-events: none;
-		}
-	}
-}
-
-.loaded {
-	.header {
-		animation: drop-in 1s ease 200ms backwards;
-	}
-
-	.wings {
-		animation: drop-in 1ms ease 200ms backwards;
 	}
 }
