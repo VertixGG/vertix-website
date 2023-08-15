@@ -2,7 +2,7 @@ import React from "react";
 
 import { useLocation } from "react-router-dom";
 
-import VertixPNG from "../assets/vertix-optimized.png";
+import VertixWeb from "../assets/vertix-optimized.webp";
 
 const NavbarItem: React.FC<{ title: string, href: string }> = ( { title, href } ) => {
     const location = useLocation();
@@ -78,7 +78,7 @@ export default function Header() {
             <nav className="navbar navbar-expand-xl">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        <img src={ VertixPNG } alt="" className="vertix-logo me-1 user-select-none"></img>
+                        <img src={ VertixWeb } alt="" className="vertix-logo me-1 user-select-none" width="60px" height="60px"></img>
                         <h4><span>V</span>ertix</h4>
                     </a>
 
@@ -129,7 +129,7 @@ export default function Header() {
             <div className="d-flex justify-content-center">
                 <div className={ `wings text-center` }>
                     <h1 className="user-select-none">Vertix</h1>
-                    <img src={ VertixPNG } alt="" className="vertix-logo user-select-none"></img>
+                    <img src={ VertixWeb } alt="" className="vertix-logo user-select-none" width="60" height="60"></img>
                 </div>
             </div>
         </section>
