@@ -41,8 +41,6 @@ export const allImagesLoadedPromise = () => {
                     img.addEventListener( "load", () => {
                         loadedImages++;
 
-                        console.log( loadedImages, allImages.length );
-
                         if ( loadedImages === allImages.length ) {
                             resolve( true );
                         }

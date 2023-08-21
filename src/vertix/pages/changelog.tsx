@@ -1,5 +1,10 @@
 import ReactMarkdown from 'react-markdown'
 
+( () => {
+    // @ts-ignore
+    import ( "./changelog.scss" );
+} )();
+
 const markdown = `
 ## Changelog
 

@@ -19,6 +19,9 @@ export const onAddToServerClick = ( type: "recommended" | "optimal" ) => {
 export default function InviteVertix() {
     return (
         <div className="container box-1 pt-5 text-center">
+            <h2>
+                Invite Vertix to your server
+            </h2>
             <h4 className="text-center">
                 Select the option that best suits your needs, you can always change the permissions later.
             </h4>

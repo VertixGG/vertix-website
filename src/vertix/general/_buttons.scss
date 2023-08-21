@@ -1,7 +1,7 @@
 .btn {
 	overflow: hidden;
 	position: relative;
-	font-family: $font-component;
+	font-family: var(--vertix-font-component);
 }
 
 @each $color, $value in $theme-colors {

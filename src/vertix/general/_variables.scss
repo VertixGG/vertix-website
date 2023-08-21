@@ -1,12 +1,14 @@
-$color-text-light: bisque;
-$color-text-light-ligther: #fce9d2;
-$color-text-light1: #c7bdbd;
+:root {
+    --vertix--color-text-light: #fce9d2;
+    --vertix--color-text-light-ligther: #fce9d2;
+    --vertix--color-text-light1: #c7bdbd;
 
-$color-text-bluelight: #96d1fe;
-$color-text-bluelight1: #a9d7ff;
-$color-text-bluelight2: #78bbff;
+    --vertix--color-text-bluelight: #96d1fe;
+    --vertix--color-text-bluelight1: #a9d7ff;
+    --vertix--color-text-bluelight2: #78bbff;
 
-$color-bg-default: #0f1e2e;
+    --vertix--color-bg-default: #0f1e2e;
 
-$font-brand: 'El Messiri', sans-serif;
-$font-component: 'Red Hat Display', 'Tahoma';
+    --vertix-font-brand: 'El Messiri', sans-serif;
+    --vertix-font-component: 'Red Hat Display', 'Tahoma';
+}

@@ -2,7 +2,6 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "./general/variables";
 @import "./general/fonts";
 @import "./general/animations";
 @import "./general/buttons";
@@ -10,42 +9,17 @@
 
 @import "./background";
 
-@import "./pages/changelog";
+@import "./header/header";
 
 /* TODO: Use variables for bootstrap dark theme, anyway use variables where it possible */
-
-html, body {
-	width: auto !important;
-	overflow-x: hidden !important
-}
-
-* {
-	scrollbar-width: none;
-	scrollbar-color: #0f1e2e #0f1e2e;
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-	width: 16px;
-}
-
-*::-webkit-scrollbar-track {
-	background: #0f1e2e;
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: rgba(255, 255, 255, 0);
-	border-radius: 10px;
-	border: 1px solid #05082b;
-}
 
 a {
 	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-component;
-	color: $color-text-light-ligther;
+	font-family: var(--vertix-font-component);
+	color: var(--vertix--color-text-light-ligther);
 }
 
 
@@ -147,7 +121,7 @@ code {
 	padding: 0 5px;
 	background: #191b1f;
 	font-family: monospace;
-	color: $color-text-bluelight
+	color: var(--vertix--color-text-bluelight);
 }
 
 .toast {
@@ -159,12 +133,9 @@ code {
 
 .toast-header {
 	background: #191b1f;
-	color: $color-text-bluelight;
+	color: var(--vertix--color-text-bluelight);
 	border-bottom: 2px solid #34383a;
 }
-
-
-@import "./header/header";
 
 .content {
 	padding-top: 100px;
@@ -179,43 +150,13 @@ code {
 		margin-bottom: 30px;
 
 		@include media-breakpoint-between(xs, sm) {
-			padding: 15px;
-			padding-top: 40px;
+			padding: 40px 15px 15px;
 		}
 
 		@include media-breakpoint-between(sm, md) {
 			padding: 35px;
 		}
 	}
-
-	//.box-feather {
-	//	padding: 40px;
-	//	border: 3px solid black;
-	//	border-radius: 35px;
-	//	background: #00000026;
-	//	box-shadow: -2px 0px 7px 2px #4d90d8;
-	//	width: 90%;
-	//	margin-bottom: 30px;
-	//
-	//	@include media-breakpoint-between(xs,sm) {
-	//		padding: 15px;
-	//		padding-top: 40px;
-	//	}
-	//
-	//	&:after {
-	//		background: url(../../public/feather.png);
-	//
-	//		height: 355px;
-	//		width: 140px;
-	//
-	//		position: absolute;
-	//
-	//		z-index: 1;
-	//		content: "";
-	//		display: block;
-	//		//right: max( calc(100vw - 341px) , 1320px );
-	//	}
-	//}
 }
 
 iframe {
@@ -247,114 +188,16 @@ img.normalize {
 	width: 100%;
 	max-width: min-content;
 
-
 	@include media-breakpoint-between(xs, sm) {
-		margin: 0;
-		margin-top: 15px;
+		margin: 15px 0 0;
 
 		max-width: 100%
 	}
 }
-
-.image-gallery img {
-	cursor: pointer;
-	margin: 15px;
-	border: 2px solid #21272e;
-	border-radius: 14px;
-	box-shadow: 2px 13px 14px 4px #0000002b;
-	width: 100px;
-	padding: 2px;
-}
-
-.showcase img {
-	cursor: pointer;
-	border-right: 1px solid #5ac1fe;
-	border-radius: 14px;
-	box-shadow: 2px 13px 14px 4px #0000002b;
-	padding: 2px;
-	width: 100%;
-	max-width: min-content;
-	border-top: 1px solid grey;
-
-	@include media-breakpoint-between(xs, sm) {
-		margin: 0;
-		margin-top: 15px;
-
-		max-width: 100%
-	}
-}
-
-.showcase .row {
-	margin-bottom: 50px;
-}
-
-.showcase .row:nth-child(2n+3) img {
-	border-right: 0;
-	border-bottom: 1px solid #3442ca;
-	box-shadow: none;
-}
-
-.showcase h3 {
-	text-align: center;
-	margin-bottom: 30px;
-	font-family: $font-component;
-	font-weight: 400;
-	text-decoration: underline;
-	color: whitesmoke;
-}
-
-.showcase .icon {
-	margin-right: 10px;
-	position: relative;
-	top: 5px;
-}
-
-.showcase .image-placeholder {
-	margin-top: 20px;
-	text-align: center;
-}
-
-//@include media-breakpoint-between(xxl, 100vh) {
-
-	.showcase .text {
-		border-radius: 10px 15px 0 0;
-		padding: 25px 40px 12px 20px;
-		border-top: 1px solid #0543ce;
-		margin: 20px auto;
-		background: #25283345;
-		color: white;
-		width: fit-content;
-
-		b {
-			color: #d9d9d9;
-			font-family: $font-component;
-		}
-
-		code {
-			background: $color-bg-default;
-			border-radius: 5px;
-			border: 1px solid #606060;
-			color: #007bff;
-			padding: 2px 5px;
-		}
-
-		p {
-			font-size: 1.2rem;
-			padding: 10px;
-		}
-	}
-//}
-
-@include media-breakpoint-between(xs, xl) {
-	.showcase img {
-		margin-bottom: 20px;
-	}
-}
-
 
 footer {
 	color: #d9d9d9;
-	font-family: $font-component;
+	font-family: var(--vertix-font-component);
 	font-size: 1.1rem;
 
 	.text-muted {
