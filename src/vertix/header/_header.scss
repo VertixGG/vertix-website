@@ -1,145 +1,152 @@
-.header {
-	.container-fluid {
-		max-width: 80%;
+#header {
+    .navbar {
+        z-index: 1;
 
-		@include media-breakpoint-between(xs, sm) {
-			max-width: 100%;
-		}
-	}
+        background: #00000069;
+        box-shadow: 20px 15px 160px 60px #00000078;
 
-	.navbar {
-		z-index: 1;
+        .container-fluid {
+            max-width: 80%;
 
-		height: 125px;
-		background: #00000069 !important;
-		box-shadow: 20px 15px 160px 60px #00000078;
+            @include media-breakpoint-between(xs, sm) {
+                max-width: 100%;
+            }
+        }
 
-		.navbar-brand {
-			h4 {
-				font-family: var(--vertix-font-brand);
+        .navbar-brand {
+            @include media-breakpoint-between(xxl, max) {
+                margin-right: 10rem;
+            }
 
-				display: inline;
-				color: var(--vertix--color-text-bluelight1);
+            #vertix-logo {
+                transform: rotate(1140deg);
 
-				span {
-					font-size: 30px;
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 4s;
+                    animation-iteration-count: 1;
+                    animation-play-state: running;
+                }
+            }
 
-					color: var(--vertix--color-text-bluelight2);
-				}
-			}
+            #vertix-brand-logo {
+                font-size: 1.5rem;
+                font-family: var(--vertix-font-brand);
 
-			@include media-breakpoint-between(xxl,max) {
-				margin-right: 10rem;
-			}
-		}
+                color: var(--vertix-color-fresh-air);
 
-		@include media-breakpoint-down(xl) {
-			.navbar-collapse.show {
-				background: rgba(0, 0, 0, 0.31);
-				border-radius: 60px;
-				padding: 20px 20px 30px;
-			}
-		}
+                #vertix-first-letter {
+                    font-size: 30px;
 
-		.nav-item.dropdown .nav-link:after {
-			content: "▼";
-			font-size: 10px;
-			padding-left: 3px;
-			color: var(--vertix--color-text-bluelight);
-			position: relative;
-		}
+                    color: var(--vertix-color-very-light-azure);
+                }
+            }
+        }
 
-		.dropdown-menu {
-			background: #00000073;
+        .navbar-collapse {
+            .dropdown-menu {
+                --bs-body-bg: #00000073;
 
-			.dropdown-item {
-				color: var(--vertix--color-text-light1);
+                --bs-dropdown-link-active-bg: transparent;
+                --bs-dropdown-link-active-color: var(--vertix-color-skyblue);
 
-				&.active, &.focus {
-					background-color: unset;
-					color: var(--vertix--color-text-bluelight);
-				}
-			}
+                --bs-dropdown-link-hover-bg: #0000004f;
+                --bs-dropdown-link-hover-color: var(--vertix-color-skyblue);
+            }
 
-			:hover {
-				text-decoration: underline;
-				background: #0000004f;
-				color: var(--vertix--color-text-bluelight1);
-			}
-		}
+            @include media-breakpoint-down(xl) {
+                &.show {
+                    background: rgba(0, 0, 0, 0.31);
+                    border-radius: 60px;
+                    padding: 20px 20px 30px;
+                }
+            }
 
-		button {
-			font-weight: 400;
+            .nav-item.dropdown .nav-link:after {
+                content: "▼";
+                position: relative;
+                font-size: 10px;
+                padding-left: 3px;
+                color: var(--vertix-color-skyblue);
+            }
 
-			&#add-to-server {
-				--bs-btn-color: #78bbff;
-				--bs-btn-border-color: #78bbff;
-				--bs-btn-hover-color: #fff;
-				--bs-btn-hover-bg: #78bbff;
-				--bs-btn-hover-border-color: #78bbff;
-				--bs-btn-focus-shadow-rgb: 13, 110, 253;
-				--bs-btn-active-color: #fff;
-				--bs-btn-active-bg: #78bbff;
-				--bs-btn-active-border-color: #78bbff;
-				--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-				--bs-btn-disabled-color: #78bbff;
-				--bs-btn-disabled-bg: transparent;
-				--bs-btn-disabled-border-color: #78bbff;
-				--bs-gradient: none;
-			}
-		}
-	}
+            button {
+                --bs-btn-padding-y: 0.65rem;
 
-	.vertix-logo {
-		transform: rotate(1140deg);
+                --bs-btn-font-size: 25px;
+                --bs-btn-font-weight: 400;
 
-		&:hover {
-			animation-name: rotate;
-			animation-duration: 4s;
-			animation-iteration-count: 1;
-			animation-play-state: running;
-		}
-	}
+                @include media-breakpoint-between(xs, sm) {
+                    --bs-btn-font-size: 18px;
+                    --bs-btn-padding-y: 0.50rem;
+                }
 
-	h1 {
-		position: relative;
-		top: 160px;
-		bottom: 40px;
+                @include media-breakpoint-between(sm, lg) {
+                    --bs-btn-font-size: 23px;
+                    --bs-btn-padding-y: 0.50rem;
+                }
 
-		font-family: var(--vertix-font-brand);
-		font-size: 4.5rem;
-		font-weight: 600;
+                &#add-to-server {
+                    --bs-btn-color: var(--vertix-color-very-light-azure);
+                    --bs-btn-border-color: var(--vertix-color-very-light-azure);
+                    --bs-btn-hover-color: #fff;
+                    --bs-btn-hover-bg: var(--vertix-color-very-light-azure);
+                    --bs-btn-hover-border-color: var(--vertix-color-very-light-azure);
+                    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+                    --bs-btn-active-color: #fff;
+                    --bs-btn-active-bg: var(--vertix-color-very-light-azure);
+                    --bs-btn-active-border-color: var(--vertix-color-very-light-azure);
+                    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+                    --bs-btn-disabled-color: var(--vertix-color-very-light-azure);
+                    --bs-btn-disabled-bg: transparent;
+                    --bs-btn-disabled-border-color: var(--vertix-color-very-light-azure);
+                    --bs-gradient: none;
+                }
+            }
+        }
+    }
 
-		color: var(--vertix--color-text-bluelight);
+    #vertix-wings {
+        #vertix-wings-heading {
+            position: relative;
+            top: 160px;
+            bottom: 40px;
 
-		text-shadow: 0px -9px 5px #000000;
-	}
+            font-family: var(--vertix-font-brand);
+            font-size: 4.5rem;
+            font-weight: 600;
 
-	.wings {
-		position: relative;
-		top: 110px;
+            color: var(--vertix-color-skyblue);
 
-		background-image: url(../../../public/wings.png);
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		background-position: top center;
+            text-shadow: 0px -9px 5px #000000;
+        }
 
-		height: 200px;
-		width: 30%;
+        #vertix-wings-placeholder {
+            position: relative;
+            top: 110px;
 
-		min-width: 420px;
-		max-width: 560px;
+            background-image: url(../../../public/wings.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
 
-		.vertix-logo {
-			top: 30px;
+            height: 200px;
+            width: 30%;
 
-			cursor: pointer;
-			position: relative;
+            min-width: 420px;
+            max-width: 560px;
 
-			animation-name: rotate;
-			animation-duration: 5s;
-			animation-iteration-count: infinite;
-			animation-play-state: running;
-		}
-	}
+            #vertix-wings-logo {
+                top: 30px;
+
+                cursor: pointer;
+                position: relative;
+
+                animation-name: rotate;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
+            }
+        }
+    }
 }

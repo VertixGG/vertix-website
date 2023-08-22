@@ -1,9 +1,9 @@
-@import "./general/variables";
-@import "./general/animations";
+@import "./general-style/vertix-variables";
+@import "./general-style/animations";
 
 * {
     scrollbar-width: none;
-    scrollbar-color: #0f1e2e #0f1e2e;
+    scrollbar-color: var(--vertix-bg-color) var(--vertix-bg-color);
 }
 
 /* Chrome, Edge, and Safari */
@@ -12,13 +12,13 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #0f1e2e;
+    background: var(--vertix-bg-color);
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
-    border: 1px solid #05082b;
+    border: 1px solid var(--vertix-color-rich-black);
 }
 
 html, body {
@@ -26,10 +26,10 @@ html, body {
     overflow-x: hidden !important;
 }
 
-// TODO: Use variables.
+/* Initial values */
 body {
-    background: #0f1e2e !important;
-    color: bisque;
+    background-color: var(--vertix-bg-color);
+    color: var(--vertix-color-bisque);
 }
 
 .body-container {

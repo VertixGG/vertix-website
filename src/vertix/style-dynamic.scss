@@ -1,210 +1,116 @@
 @import 'react-photo-view/dist/react-photo-view.css';
 
+@import "./general-style/bs-variables";
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "./general/fonts";
-@import "./general/animations";
-@import "./general/buttons";
-@import "./general/accordion";
-
-@import "./background";
+@import "./general-style/fonts";
+@import "./general-style/buttons";
+@import "./general-style/background";
 
 @import "./header/header";
 
-/* TODO: Use variables for bootstrap dark theme, anyway use variables where it possible */
-
-a {
-	text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--vertix-font-component);
-	color: var(--vertix--color-text-light-ligther);
-}
-
-
-.fs-7 {
-	font-size: 1rem;
-}
-
 @include media-breakpoint-between(xs, sm) {
-	ul {
-		padding-left: 10px;
-	}
+    ul {
+        padding-left: 10px;
+    }
 
-	ul > ul {
-		padding-left: 20px;
-	}
+    ul > ul {
+        padding-left: 20px;
+    }
 
-	li {
-		font-size: 0.9rem;
-	}
-
-	.fs-1 {
-		font-size: 2.5rem;
-	}
-
-	.fs-2 {
-		font-size: 2rem;
-	}
-
-	.fs-3 {
-		font-size: 1.75rem;
-	}
-
-	.fs-4 {
-		font-size: 1.5rem;
-	}
-
-	.fs-5 {
-		font-size: 1.25rem;
-	}
-
-	.fs-6 {
-		font-size: 1rem;
-	}
-
-	.fs-7 {
-		font-size: 0.9rem;
-	}
+    li {
+        font-size: 0.9rem;
+    }
 }
 
 @include media-breakpoint-between(sm, md) {
-	ul {
-		padding: 5px;
-	}
+    ul {
+        padding: 5px;
+    }
 
-	ul > ul {
-		padding-left: 13px;
-	}
+    ul > ul {
+        padding-left: 13px;
+    }
 
-	li {
-		font-size: 1rem;
-	}
-
-	.fs-1 {
-		font-size: 3rem;
-	}
-
-	.fs-2 {
-		font-size: 2.5rem;
-	}
-
-	.fs-3 {
-		font-size: 2rem;
-	}
-
-	.fs-4 {
-		font-size: 1.75rem;
-	}
-
-	.fs-5 {
-		font-size: 1.5rem;
-	}
-
-	.fs-6 {
-		font-size: 1.25rem;
-	}
-
-	.fs-7 {
-		font-size: 1rem;
-	}
+    li {
+        font-size: 1rem;
+    }
 }
 
 hr {
-	box-shadow: -2px 0px 7px 2px #000000;
-	border-color: #097bc8;
+    box-shadow: -2px 0px 7px 2px #000000;
 }
 
 code {
-	border: 2px solid #34383a;
-	padding: 0 5px;
-	background: #191b1f;
-	font-family: monospace;
-	color: var(--vertix--color-text-bluelight);
-}
-
-.toast {
-	background: #1e1e1e;
-	border: 4px solid #1d2224;
-	border-radius: 14px;
-	box-shadow: 2px 13px 14px 4px #0000002b;
-}
-
-.toast-header {
-	background: #191b1f;
-	color: var(--vertix--color-text-bluelight);
-	border-bottom: 2px solid #34383a;
+    border: 2px solid #34383a;
+    padding: 0 5px;
+    background: #191b1f;
+    font-family: monospace;
 }
 
 .content {
-	padding-top: 100px;
+    padding-top: 100px;
 
-	.box-1 {
-		padding: 40px;
-		border: 3px solid black;
-		border-radius: 35px;
-		background: #00000026;
-		box-shadow: -2px 0px 7px 2px #4d90d8;
-		width: 90%;
-		margin-bottom: 30px;
+    .box-1 {
+        padding: 40px;
+        border: 3px solid black;
+        border-radius: 35px;
+        background: #00000026;
+        box-shadow: -2px 0px 7px 2px #4d90d8;
+        width: 90%;
+        margin-bottom: 30px;
 
-		@include media-breakpoint-between(xs, sm) {
-			padding: 40px 15px 15px;
-		}
+        @include media-breakpoint-between(xs, sm) {
+            padding: 40px 15px 15px;
+        }
 
-		@include media-breakpoint-between(sm, md) {
-			padding: 35px;
-		}
-	}
-}
-
-iframe {
-	border: 2px solid #21272e;
-	border-radius: 14px;
-	box-shadow: 12px 53px 54px 14px #0000002b;
+        @include media-breakpoint-between(sm, md) {
+            padding: 35px;
+        }
+    }
 }
 
 .PhotoView__Photo {
-	cursor: pointer;
-	margin: 15px;
-	border: 2px solid #21272e;
-	border-radius: 14px;
-	box-shadow: 2px 13px 14px 4px #0000002b;
-	width: initial !important;
-	height: initial !important;
+    cursor: pointer;
+    margin: 15px;
+    border: 2px solid #21272e;
+    border-radius: 14px;
+    box-shadow: 2px 13px 14px 4px #0000002b;
+    width: initial !important;
+    height: initial !important;
 
-	@include media-breakpoint-between(xs, sm) {
-		max-width: 90% !important;
-	}
+    @include media-breakpoint-between(xs, sm) {
+        max-width: 90% !important;
+    }
 }
 
 img.normalize {
-	margin: 15px;
-	border: 2px solid #21272e;
-	border-radius: 14px;
-	box-shadow: 2px 13px 14px 4px #0000002b;
-	padding: 2px;
-	width: 100%;
-	max-width: min-content;
+    margin: 15px;
+    border: 2px solid #21272e;
+    border-radius: 14px;
+    box-shadow: 2px 13px 14px 4px #0000002b;
+    padding: 2px;
+    width: 100%;
+    max-width: min-content;
 
-	@include media-breakpoint-between(xs, sm) {
-		margin: 15px 0 0;
+    @include media-breakpoint-between(xs, sm) {
+        margin: 15px 0 0;
 
-		max-width: 100%
-	}
+        max-width: 100%
+    }
 }
 
 footer {
-	color: #d9d9d9;
-	font-family: var(--vertix-font-component);
-	font-size: 1.1rem;
+    color: #d9d9d9;
+    font-family: var(--vertix-font-component);
+    font-size: 1.1rem;
 
-	.text-muted {
-		color: #d9d9d9 !important;
-	}
+    .text-muted {
+        color: #d9d9d9 !important;
+    }
 
-	a:hover {
-		text-decoration: underline;
-	}
+    a:hover {
+        text-decoration: underline;
+    }
 }

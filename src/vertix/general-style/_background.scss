@@ -1,6 +1,6 @@
 body {
 	.body-container {
-		background-image: url(../../public/bg2.webp), url(../../public/bg1.webp);
+		background-image: url(../../../public/bg2.webp), url(../../../public/bg1.webp);
 		background-position: right top, left top;
 		background-position-y: -65px;
 		background-repeat: no-repeat, no-repeat;
@@ -28,7 +28,7 @@ body {
 		}
 
 		@include media-breakpoint-between(xs, sm) {
-			background-image: url(../../public/bg2.webp);
+			background-image: url(../../../public/bg2.webp);
 			background-size: 100%;
 			background-position-y: -32px;
 		}

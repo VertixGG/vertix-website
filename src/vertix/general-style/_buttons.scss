@@ -1,14 +1,13 @@
-.btn {
-	overflow: hidden;
-	position: relative;
-	font-family: var(--vertix-font-component);
-}
-
 @each $color, $value in $theme-colors {
 	.btn-outline-#{$color} {
 		background: #0000009e;
 		border-radius: 12px
 	}
+}
+
+.btn-effect {
+	overflow: hidden;
+	position: relative;
 }
 
 .btn-effect::after {
@@ -28,21 +27,3 @@
 	left: 120%;
 	transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-
-.btn-responsive {
-	font-size: 25px;
-	--bs-btn-padding-y: 0.65rem;
-
-	@include media-breakpoint-between(xs, sm) {
-		font-size: 18px;
-		--bs-btn-padding-y: 0.50rem;
-	}
-
-	@include media-breakpoint-between(sm, lg) {
-		font-size: 23px;
-		--bs-btn-padding-y: 0.50rem;
-	}
-}
-
-
-
