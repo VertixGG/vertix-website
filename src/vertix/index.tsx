@@ -1,34 +1,21 @@
 import React, { Suspense } from "react";
+
 import { Route, Routes } from 'react-router-dom';
 
 import LoadingContainer from "@vertix/ui/loading-container";
 
 import Header from "@vertix/header/header";
-import Home from "@vertix/pages/home";
+
+import localRoutes from "@vertix/routes";
 
 import { allImagesLoadedPromise, windowLoadedPromise, wrapPromiseSuspendable } from "@internal/utils/loading";
 
-import 'react-photo-view/dist/react-photo-view.css';
+import "./style-static.scss"
 
-import "./index.scss";
-
-const InviteVertix = React.lazy( () => import( "@vertix/pages/invite-vertix" ) );
-
-const PrivacyPolicy = React.lazy( () => import( "@vertix/pages/legal-polices/privacy-policy" ) );
-const TermsOfService = React.lazy( () => import( "@vertix/pages/legal-polices/terms-of-service" ) );
-
-const Changelog = React.lazy( () => import( "@vertix/pages/changelog" ) );
-const Credits = React.lazy( () => import( "@vertix/pages/credits" ) );
-const Updates = React.lazy( () => import( "@vertix/pages/updates" ) );
-
-const FeaturesVideo = React.lazy( () => import( "@vertix/pages/features/features-video" ) );
-const FeaturesImages = React.lazy( () => import( "@vertix/pages/features/features-images" ) );
-const FeaturesDynamicChannelsShowcase = React.lazy( () => import( "@vertix/pages/features/features-dynamic-channels-showcase" ) );
-
-const EnableTransferOwnership = React.lazy( () => import( "@vertix/posts/enable-transfer-ownership" ) );
-const HowToSetup = React.lazy( () => import( "@vertix/posts/how-to-setup" ) );
-const HowToSetupLogsChannel = React.lazy( () => import( "@vertix/posts/how-to-setup-logs-channel" ) );
-const HowToSetupDisplayStepStandalone = React.lazy( () => import( "@vertix/posts/steps/how-to-setup-display-step-standalone" ) );
+( () => {
+    // @ts-ignore
+    import ( "./style-dynamic.scss" );
+} )();
 
 const loadedPromise = windowLoadedPromise(),
     loadedSuspensePromise = wrapPromiseSuspendable( loadedPromise );
@@ -38,41 +25,16 @@ const RoutesComponent = () => {
 
     return (
         <Routes>
-            <Route path="/" element={ <Home/> }/>
-
-            <Route path="/invite-vertix" element={ <InviteVertix/> }/>
-
-            <Route path="/privacy-policy" element={ <PrivacyPolicy/> }/>
-            <Route path="/terms-of-service" element={ <TermsOfService/> }/>
-
-            <Route path="/features/dynamic-channels-showcase" element={ <FeaturesDynamicChannelsShowcase/> }/>
-            <Route path="/features-video" element={ <FeaturesVideo/> }/>
-            <Route path="/features-images" element={ <FeaturesImages/> }/>
-
-            <Route path="/changelog" element={ <Changelog/> }/>
-            <Route path="/updates" element={ <Updates/> }/>
-            <Route path="/credits" element={ <Credits/> }/>
-
-            <Route path="/posts/enable-transfer-ownership" element={ <EnableTransferOwnership/> }></Route>
-            <Route path="/posts/how-to-setup" element={ <HowToSetup/> }></Route>
-            <Route path="/posts/how-to-setup-logs-channel" element={ <HowToSetupLogsChannel/> }></Route>
-
-            <Route path="/setup/:step" element={ <HowToSetupDisplayStepStandalone/> }></Route>
-
-            <Route path="*" element={ <Home/> }/>
+            { localRoutes.map( ( route ) => {
+                return <Route key={ route.path } path={ route.path } element={ <route.component/> }/>;
+            } ) }
         </Routes>
     )
 };
 
 export default function Index() {
-    console.log( "Index" );
-
     loadedPromise.then( () => {
-        console.log( "Loaded" );
-
         allImagesLoadedPromise().then( () => {
-            console.log( "All images loaded" );
-
             document.querySelector( ".body-container" )?.classList.remove( "unload", "not-loaded" );
             document.querySelector( ".body-container" )?.classList.add( "loaded" );
         } );
@@ -101,10 +63,20 @@ export default function Index() {
                         </li>
                         <li className="nav-item"><a href="/credits" className="nav-link px-2 text-muted">Credits</a>
                         </li>
-                        <li className="nav-item"><a href="mailto:leonid@vertix.gg"
-                                                    className="nav-link px-2 text-muted">Contact</a></li>
+                        <li className="nav-item">
+                            <a href="mailto:leonid@vertix.gg" className="nav-link px-2 text-muted">Contact</a>
+                        </li>
                     </ul>
                 </footer>
+
+                <div className="d-flex justify-content-center opacity-0 text-white">
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">vertix</a>&nbsp;|&nbsp;
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">discord</a>&nbsp;|&nbsp;
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">bot</a>&nbsp;|&nbsp;
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">temporary</a>&nbsp;|&nbsp;
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">voice</a>&nbsp;|&nbsp;
+                    <a href="https://vertix.gg" target="_blank" rel="noreferrer">channels</a>
+                </div>
             </div>
         </div>
     );

@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 import { allImagesLoadedPromise } from "@internal/utils/loading";
 
 import LoadingContainer from "@vertix/ui/loading-container";
+
+( () => {
+    // @ts-ignore
+    import ( "./features-images.scss" );
+} )();
+
 
 const images_v_0_0_0 = {
     '101.png': 'https://drive.google.com/uc?export=download&id=1Jiq9WkmKl7AsEQhT0zY2d0zn4TfJqLkB',
@@ -121,9 +127,9 @@ export default function FeaturesImages() {
     return (
         <>
             {
-               ! isImagesLoaded && <LoadingContainer/>
+                ! isImagesLoaded && <LoadingContainer/>
             }
-            <ImagesGallery show={isImagesLoaded }/>
+            <ImagesGallery show={ isImagesLoaded }/>
         </>
     )
 

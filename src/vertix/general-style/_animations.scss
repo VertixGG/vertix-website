@@ -1,6 +1,6 @@
 @keyframes rotate {
 	from {
-		transform: rotate(0deg);
+		transform: rotate(-1120deg);
 	}
 	to {
 		transform: rotate(1140deg);
@@ -29,13 +29,6 @@
 
 .opacity-out-1 {
 	animation: opacity-out 1s ease 200ms backwards;
-}
-
-.pulse {
-	@include media-breakpoint-up(xl) {
-		animation: pulse 2s infinite;
-		transition: .2s;
-	}
 }
 
 @keyframes drop-in {

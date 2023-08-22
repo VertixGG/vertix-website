@@ -2,6 +2,11 @@ import React from "react";
 
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
+( () => {
+    // @ts-ignore
+    import ( "./features-dynamic-channels-showcase.scss" );
+} )();
+
 interface IAccordionProps {
     icon: string;
     title: string;
@@ -542,7 +547,7 @@ export default function FeaturesDynamicChannelsShowcase() {
     ];
 
     return (
-        <div className="container box-1 showcase">
+        <div className="container box-1 dynamic-channels-showcase">
             <h4>Dynamic Channel - Features</h4>
             <hr/>
             <div className="accordion" data-bs-theme="dark">
