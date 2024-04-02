@@ -50,7 +50,15 @@ export default function Home() {
                     99%,
                     ensuring reliable
                     performance and uninterrupted access for your server members.</p>
+
                 <br/>
+
+                <div className="d-none d-xl-block mb-5">
+                    <a href="/features/dynamic-channels-showcase">
+                    <img src="https://i.ibb.co/rxzmMhY/discord-com-channels-1110248409761316944-1122539897060855838.png"
+                         alt="Voice channel managment" className="normalize"/>
+                    </a>
+                </div>
 
                 <h3 className="mb-3">Why should you choose <b>Vertix</b>?</h3>
 
@@ -75,9 +83,7 @@ export default function Home() {
                 <ul>
                     <li>Fully customizable text elements to personalize your server's appearance.</li>
                     <li>A user-friendly dashboard for easy configuration and management.</li>
-                    <li>Support for multiple languages to cater to diverse communities, russian already added, more
-                        languages in progress.
-                    </li>
+                    <li>Support for multiple languages to cater to diverse communities</li>
                     <li>Server logs to keep track of important activities and events.</li>
                     <li>And many more exciting features on the horizon!</li>
                 </ul>
@@ -85,6 +91,17 @@ export default function Home() {
                 <p className="fs-5">To get started with <b>Vertix</b>, use <code>/setup</code> command and follow our
                     simple <a href="/posts/how-to-setup">step-by-step</a> guide.</p>
                 <br/>
+
+                <div className="d-none d-xl-block mb-5">
+                    <a href="/posts/how-to-setup">
+                    <img
+                        src="https://i.ibb.co/mNcTWQK/000.png"
+                        alt="Setup" className="normalize"/>
+                    </a>
+                    <br/>
+                </div>
+
+
                 <p className="fs-5">Thank you for considering <b>Vertix</b>, and we look forward to enhancing your
                     Discord
                     server experience</p>
