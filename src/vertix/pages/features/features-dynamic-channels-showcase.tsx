@@ -16,44 +16,44 @@ interface IAccordionProps {
 }
 
 const images = {
-    "dynamic_channel_interface": "https://drive.google.com/uc?export=download&id=1obqUV-Aw_O52mWMrBpv02Ov4VMPdOdmj",
+    "dynamic_channel_interface": "https://vertix.twic.pics/images/features-dynamic-channels/0_dynamic_channel_interface.png",
 
-    "rename_channel_modal_102": "https://drive.google.com/uc?export=download&id=1qRyIgwhgUDAGTmZip4P-WC895gXoXHdV",
-    "rename_channel_changed_103": "https://drive.google.com/uc?export=download&id=1ubFDTf100ysUp4uYJRqRMt8KWlxaGph7",
+    "rename_channel_modal_102": "https://vertix.twic.pics/images/features-dynamic-channels/1_rename_channel_modal_102.png",
+    "rename_channel_changed_103": "https://vertix.twic.pics/images/features-dynamic-channels/2_rename_channel_changed_103.png",
 
-    "user_limit_modal_104": "https://drive.google.com/uc?export=download&id=1KAodJYnGFxaA6PcUU5DPuY03zKsZEyjS",
-    "user_limit_changed_105": "https://drive.google.com/uc?export=download&id=1StfmzWg9X7wM30Rqzs2fQX5zv-kM0Zec",
+    "user_limit_modal_104": "https://vertix.twic.pics/images/features-dynamic-channels/3_user_limit_modal_104.png",
+    "user_limit_changed_105": "https://vertix.twic.pics/images/features-dynamic-channels/4_user_limit_changed_105.png",
 
-    "transfer_start_2": "https://drive.google.com/uc?export=download&id=1MrzuSekawqtTHVGSqkRGT86OyWfTZb5Y",
-    "transfer_select_user_3": "https://drive.google.com/uc?export=download&id=1LF1R61ZLFLWJyCFzDgejiqfFc01YUr7h",
-    "transfer_yes_4": "https://drive.google.com/uc?export=download&id=179Zbu3Jh9o1qVRDQL1TeY0Q6My1bLqYo",
-    "transfer_transfer_complete": "https://drive.google.com/uc?export=download&id=1xnip2nGjSX5jgD-3ZTypsteSVhEEWzxo",
+    "transfer_start_2": "https://vertix.twic.pics/images/features-dynamic-channels/5_transfer_start_2.png",
+    "transfer_select_user_3": "https://vertix.twic.pics/images/features-dynamic-channels/6_transfer_select_user_3.png",
+    "transfer_yes_4": "https://vertix.twic.pics/images/features-dynamic-channels/7_transfer_yes_4.png",
+    "transfer_transfer_complete": "https://vertix.twic.pics/images/features-dynamic-channels/8_transfer_transfer_complete.png",
 
-    "clean_chat_mess": "https://drive.google.com/uc?export=download&id=1f8MnNPqM3LRRftCY1mMGSEd08a4Bq0Wx",
-    "clean_chat_clean": "https://drive.google.com/uc?export=download&id=1kzgbbeMVxGa-LPEqyURoHnJzQzcny72c",
+    "clean_chat_mess": "https://vertix.twic.pics/images/features-dynamic-channels/9_clean_chat_mess.png",
+    "clean_chat_clean": "https://vertix.twic.pics/images/features-dynamic-channels/10_clean_chat_clean.png",
 
-    "channel_state_private": "https://drive.google.com/uc?export=download&id=19z7g-5m8fIYVsaf4y9DtXswtrNkkTUTw",
-    "channel_state_public": "https://drive.google.com/uc?export=download&id=1AJ_8VffWbZNPNeUMkZi_U7blD9fPgq5W",
+    "channel_state_private": "https://vertix.twic.pics/images/features-dynamic-channels/11_channel_state_private.png",
+    "channel_state_public": "https://vertix.twic.pics/images/features-dynamic-channels/12_channel_state_public.png",
 
-    "visibility_state_shown": "https://drive.google.com/uc?export=download&id=1TVMcnl5TwvBipCsQU4pDrvuCVZr1h48e",
-    "visibility_state_hidden": "https://drive.google.com/uc?export=download&id=1gfSFvFikgc8ZnY9bRDf1qUcIDxsw127M",
+    "visibility_state_shown": "https://vertix.twic.pics/images/features-dynamic-channels/13_visibility_state_shown.png",
+    "visibility_state_hidden": "https://vertix.twic.pics/images/features-dynamic-channels/14_visibility_state_hidden.png",
 
-    "access_interface_access": "https://drive.google.com/uc?export=download&id=1vpH5GIPbOee8MVMwyfb5G9kFaCGzJyM_",
-    "access_granted": "https://drive.google.com/uc?export=download&id=1melGwZ4yXDdvmtXm_bdxn0zYII5cEhlo",
-    "access_deny": "https://drive.google.com/uc?export=download&id=13vd5GWD0XEOTP9ELgIJ7rXvUE7m3ALZl",
-    "access_blocked": "https://drive.google.com/uc?export=download&id=1IqYZnnosQB_iAuxV2MESpb06ZKL1ASCm",
-    "access_unblocked": "https://drive.google.com/uc?export=download&id=1zogACaX3R4SJtIBbBx6-pOP3gQLGC4pG",
-    "access_kicked": "https://drive.google.com/uc?export=download&id=1NuBLlMajm2tgQ3497g6Q2XVO4eTTcfOR",
+    "access_interface_access": "https://vertix.twic.pics/images/features-dynamic-channels/15_access_interface_access.png",
+    "access_granted": "https://vertix.twic.pics/images/features-dynamic-channels/16_access_granted.png",
+    "access_deny": "https://vertix.twic.pics/images/features-dynamic-channels/17_access_deny.png",
+    "access_blocked": "https://vertix.twic.pics/images/features-dynamic-channels/18_access_blocked.png",
+    "access_unblocked": "https://vertix.twic.pics/images/features-dynamic-channels/19_access_unblocked.png",
+    "access_kicked": "https://vertix.twic.pics/images/features-dynamic-channels/20_access_kicked.png",
 
-    "reset_success_1016": "https://drive.google.com/uc?export=download&id=1cp63udo86Ihr622gPlv_9bxFNaJK3jQe",
+    "reset_success_1016": "https://vertix.twic.pics/images/features-dynamic-channels/21_reset_success_1016.png",
 
-    "claim_about_start_1017": "https://drive.google.com/uc?export=download&id=1eoRowKTJM78aSgPmrj7QNmDzypnR6Pdb",
-    "claim_back_on_charge_1018": "https://drive.google.com/uc?export=download&id=14LuGvhOAqvXq1_UO2bzuskbzEcn-e9PQ",
-    "claim_wish_to_claim_1019": "https://drive.google.com/uc?export=download&id=1itLzgLc8IMq7HjrQSTwoSSNvbCQLXUle",
+    "claim_about_start_1017": "https://vertix.twic.pics/images/features-dynamic-channels/22_claim_about_start_1017.png",
+    "claim_back_on_charge_1018": "https://vertix.twic.pics/images/features-dynamic-channels/23_claim_back_on_charge_1018.png",
+    "claim_wish_to_claim_1019": "https://vertix.twic.pics/images/features-dynamic-channels/24_claim_wish_to_claim_1019.png",
 
-    "claim_2_candidates_wish_to_claim_b": "https://drive.google.com/uc?export=download&id=1wmG0eGxWQVSm2W8xZaPcmM4453FVgZ_u",
+    "claim_2_candidates_wish_to_claim_b": "https://vertix.twic.pics/images/features-dynamic-channels/25_claim_2_candidates_wish_to_claim_b.png",
 
-    "claim_results_z": "https://drive.google.com/uc?export=download&id=1WMMqogSswpxwNlmHrG3tj1il7u_YJsSR",
+    "claim_results_z": "https://vertix.twic.pics/images/features-dynamic-channels/26_claim_results_z.png",
 };
 
 export const AccordionItem = ( props: IAccordionProps ) => {
